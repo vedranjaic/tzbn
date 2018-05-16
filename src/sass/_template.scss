@@ -1,0 +1,33 @@
+// Template
+// Colors
+$black: #161616;
+$white: #ffffff;
+$grey: #2c303c;
+
+// Functional colors
+$functional: (
+	yellow: #ffca3a,
+	green: #8dc63f,
+	blue: #1982c4,
+	red: #ff595e
+);
+
+// Fonts
+$font: 'Montserrat', sans-serif;
+$font-fallback: Helvetica, Arial, sans-serif;
+
+body {
+	font-family: $font;
+}
+
+// Modals
+.modal {
+	background-color: rgba($black, 0.5);
+	.modal-open & {
+		display: flex;
+		align-items: center;
+	}
+	.modal-footer {
+		text-align: center;
+	}
+}
