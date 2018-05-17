@@ -5,3 +5,10 @@
 	}
 	@return map-get($functional, $color);
 }
+
+@function neos($color) {
+	@if not map-has-key($neos, $color) {
+		@warn "Color #{$color} not found in $neos map.";
+	}
+	@return map-get($neos, $color);
+}

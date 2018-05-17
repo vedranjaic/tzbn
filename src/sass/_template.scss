@@ -7,17 +7,36 @@ $grey: #2c303c;
 // Functional colors
 $functional: (
 	yellow: #ffca3a,
-	green: #8dc63f,
+	green: #58d263,
 	blue: #1982c4,
-	red: #ff595e
+	red: #d26358
+);
+
+$neos: (
+	teal-dark: #1f738b,
+	teal-medium: #58c7d2,
+	teal-light: #b5e6eb,
+
 );
 
 // Fonts
 $font: 'Montserrat', sans-serif;
 $font-fallback: Helvetica, Arial, sans-serif;
 
+// Progress bar Timer
+$progress-h: 10px;
+
+// Body
 body {
 	font-family: $font;
+}
+
+
+// Buttons
+.btn {
+	@include transition(background-color);
+	border-radius: 0;
+	border: 0;
 }
 
 // Modals
