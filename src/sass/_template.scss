@@ -37,6 +37,34 @@ body {
 	@include transition(background-color);
 	border-radius: 0;
 	border: 0;
+	&-success {
+		background-color: functional(green);
+		&:hover,
+		&:focus {
+			background-color: darken(functional(green), 10%);
+		}
+	}
+	&-primary {
+		background-color: neos(teal-dark);
+		&:hover,
+		&:focus {
+			background-color: darken(neos(teal-dark), 10%);
+		}
+	}
+}
+
+
+// Content
+.content {
+	display: flex;
+	justify-content: space-between;
+	&.index {
+		height: 100vh;
+		background: radial-gradient(neos(teal-light), neos(teal-medium));
+	}
+	&.quiz {
+		height: calc(100vh - 10px);
+	}
 }
 
 // Modals

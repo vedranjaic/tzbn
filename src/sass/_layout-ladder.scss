@@ -8,16 +8,21 @@
 		justify-content: center;
 		background-color: neos(teal-dark);
 		height: 80px;
-		padding: 10px 2em;
-		img {
+		padding: 1.2em 2em;
+		a {
 			display: block;
 			width: 100%;
 			max-width: 250px;
 			margin: 0 auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 	.list-position {
 		display: flex;
+		height: calc((100vh - #{$progress-h} - 80px));
 		flex-direction: column-reverse;
 		margin-bottom: 0;
 		li {

@@ -29,7 +29,7 @@
 			color: $white;
 			display: block;
 			text-transform: uppercase;
-			margin-bottom: 2.5em;
+			margin-bottom: 1.2em;
 		}
 		.list-answers {
 			display: flex;
@@ -44,6 +44,49 @@
 				// width: 50%;
 				height: 15vh;
 				margin-bottom: 1em;
+				&.answer {
+					.btn {
+						position: relative;
+						background-color: lighten(neos(teal-dark), 40%);
+						// overflow: hidden;
+						&::after {
+							position: absolute;
+							bottom: -0.45em;
+							right: -0.15em;
+							font-size: 6em;
+							opacity: 0.2;
+						}
+					}
+					&[class*="answer-"] {
+						.btn {
+							color: $white;
+						}
+					}
+				}
+				&.answer-correct {
+					.btn {
+						background-color: functional(green);
+						&::after {
+							content: '\f00c';
+							font-family: $fa;
+						}
+					}
+				}
+				&.answer-was-correct {
+					.btn {
+						background-color: functional(green);
+						// Animate
+					}
+				}
+				&.answer-incorrect {
+					.btn {
+						background-color: functional(red);
+						&::after {
+							content: '\f00d';
+							font-family: $fa;
+						}
+					}
+				}
 			}
 			.btn {
 				display: flex;

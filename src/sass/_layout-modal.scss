@@ -1,0 +1,37 @@
+// Modal
+.modal {
+	&-content {
+		border: 0;
+		border-radius: 0;
+		background: radial-gradient(neos(teal-light), neos(teal-medium));
+		.modal-header {
+			padding-top: 3em;
+			padding-bottom: 3em;
+			border: 0;
+			.modal-title {
+				font-size: 40px;
+				font-weight: 700;
+				color: $white;
+			}
+		}
+		.modal-body {
+			color: neos(teal-dark);
+			.reward {
+				font-weight: 700;
+			}
+			.countdown {
+				font-weight: 700;
+				&::before {
+					content: '\f017';
+					font-family: $fa;
+					padding-right: 0.5em;
+				}
+			}
+		}
+		.modal-footer {
+			padding-top: 3em;
+			padding-bottom: 3em;
+			border: 0;
+		}
+	}
+}
