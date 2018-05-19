@@ -55,7 +55,8 @@ a {
 				position: relative;
 				border: 2px solid $white;
 				border-radius: 5px;
-				color: $white;
+				color: neos(teal-dark);
+				background-color: rgba($white, 0.3);
 				padding: 2em;
 				.icon {
 					font-size: 30px;
@@ -88,12 +89,62 @@ a {
 	}
 }
 
-// Start Quiz
-.section-start {
+// User
+.user {
 	width: 30vw;
-	padding: 2em 5em;
 	background-color: neos(teal-dark);
 	color: $white;
+	.tab-content {
+		height: 100vh;
+	}
+	.section-start,
+	.section-leaderboard {
+		height: 100%;
+	}
+	.nav-tabs {
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		width: 30vw;
+		border-bottom: 0;
+		li {
+			float: none;
+			flex: 1 1 50%;
+			margin-bottom: 0;
+			&.active {
+				a {
+					background-color: neos(teal-dark);
+					&:hover,
+					&:focus {
+						background-color: neos(teal-dark);
+						color: $white;
+					}
+				}
+			}
+			a {
+				@include transition(background-color);
+				margin-right: 0;
+				padding-top: 1.5em;
+				padding-bottom: 1.5em;
+				text-align: center;
+				border-radius: 0;
+				border: 0;
+				background-color: darken(neos(teal-dark), 10%);
+				color: $white;
+				&:hover,
+				&:focus {
+					border: 0;
+					background-color: darken(neos(teal-dark), 5%);
+				}
+			}
+		}
+	}
+}
+
+// Start Quiz
+.section-start {
+	padding: 2em 5em;
 	.section-heading {
 		display: block;
 		margin-bottom: 3em;
@@ -111,6 +162,36 @@ a {
 		margin-top: 1.5em;
 		padding-top: 1em;
 		padding-bottom: 1em;
+	}
+}
+
+// Leaderboard
+.leaderboard {
+	li {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid darken(neos(teal-dark), 5%);
+		.user-position {
+			padding-top: 1em;
+			padding-bottom: 1em;
+			display: flex;
+			width: 40px;
+			font-weight: 700;
+			margin-right: 10px;
+			background-color: rgba($black, 0.1);
+			align-items: center;
+			justify-content: center;
+		}
+		.user-name {
+			margin: 0;
+			align-items: center;
+		}
+		.user-pts {
+			display: flex;
+			justify-content: flex-end;
+			flex: 1;
+			padding-right: 1em;
+		}
 	}
 }
 

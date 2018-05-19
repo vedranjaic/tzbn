@@ -7380,7 +7380,8 @@ a {
   position: relative;
   border: 2px solid #ffffff;
   border-radius: 5px;
-  color: #ffffff;
+  color: #1f738b;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 2em;
 }
 .section-intro .intro-boxes li .icon {
@@ -7439,11 +7440,60 @@ a {
   border-radius: 50%;
 }
 
-.section-start {
+.user {
   width: 30vw;
-  padding: 2em 5em;
   background-color: #1f738b;
   color: #ffffff;
+}
+.user .tab-content {
+  height: 100vh;
+}
+.user .section-start,
+.user .section-leaderboard {
+  height: 100%;
+}
+.user .nav-tabs {
+  position: fixed;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 30vw;
+  border-bottom: 0;
+}
+.user .nav-tabs li {
+  float: none;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+  margin-bottom: 0;
+}
+.user .nav-tabs li.active a {
+  background-color: #1f738b;
+}
+.user .nav-tabs li.active a:hover, .user .nav-tabs li.active a:focus {
+  background-color: #1f738b;
+  color: #ffffff;
+}
+.user .nav-tabs li a {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  margin-right: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: center;
+  border-radius: 0;
+  border: 0;
+  background-color: #165161;
+  color: #ffffff;
+}
+.user .nav-tabs li a:hover, .user .nav-tabs li a:focus {
+  border: 0;
+  background-color: #1a6276;
+}
+
+.section-start {
+  padding: 2em 5em;
 }
 .section-start .section-heading {
   display: block;
@@ -7462,6 +7512,42 @@ a {
   margin-top: 1.5em;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+.leaderboard li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #1a6276;
+}
+.leaderboard li .user-position {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  font-weight: 700;
+  margin-right: 10px;
+  background-color: rgba(22, 22, 22, 0.1);
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.leaderboard li .user-name {
+  margin: 0;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.leaderboard li .user-pts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 1em;
 }
 
 .sunburst {

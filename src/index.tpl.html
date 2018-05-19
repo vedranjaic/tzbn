@@ -38,27 +38,79 @@
 		</section>
 		<!-- /.section-intro -->
 
-		<section class="section-start">
-			<heading class="section-heading">
-				<h3 class="section-title">Registriraj se i kreni!</h3>
-				<p>Tvoje podatke koristimo samo u svrhu igranja nagradne igre, podatke koje ostaviš ne prikazujemo javno.</p>				
-			</heading>
-			<!-- /.section-heading -->
-			<form action="#">
-				<div class="form-group">
-					<label for="tzbnUsername">Odaberi username:</label>
-					<input type="text" class="form-control input-lg" id="tzbnUsername" autofocus>
-				</div>
-				<!-- /.form-group -->
-				<div class="form-group">
-					<label for="tzbnFERMail">Mejl s faksa:</label>
-					<input type="email" class="form-control input-lg" id="tzbnFERMail" required>
-				</div>
-				<!-- /.form-group -->
-				<a href="tzbn.html" class="btn btn-lg btn-success btn-block btn-start">POKRENI KVIZ</a>
-			</form>
-		</section>
-		<!-- /.section-start -->
+		<aside class="user">
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<section class="section-start tab-pane " role="tabpanel" id="start">
+					<heading class="section-heading">
+						<h3 class="section-title">Registriraj se i kreni!</h3>
+						<p>Tvoje podatke koristimo samo u svrhu igranja nagradne igre, podatke koje ostaviš ne prikazujemo javno.</p>				
+					</heading>
+					<!-- /.section-heading -->
+					<form action="#">
+						<div class="form-group">
+							<label for="tzbnUsername">Odaberi username:</label>
+							<input type="text" class="form-control input-lg" id="tzbnUsername" autofocus>
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label for="tzbnFERMail">Mejl s faksa:</label>
+							<input type="email" class="form-control input-lg" id="tzbnFERMail" required>
+						</div>
+						<!-- /.form-group -->
+						<a href="tzbn.html" class="btn btn-lg btn-success btn-block btn-start">POKRENI KVIZ</a>
+					</form>
+				</section>
+				<!-- /.section-start -->
+
+				<section class="section-leaderboard tab-pane active" role="tabpanel" id="leaderboard">
+
+					<ul class="leaderboard list-unstyled">
+						<li>
+							<span class="user-position">1.</span>
+							<h4 class="user-name">Username</h4>
+							<span class="user-pts">233</span>
+						</li>
+						<li>
+							<span class="user-position">2.</span>
+							<h4 class="user-name">Username</h4>
+							<span class="user-pts">233</span>
+						</li>
+						<li>
+							<span class="user-position">3.</span>
+							<h4 class="user-name">Username</h4>
+							<span class="user-pts">233</span>
+						</li>
+						<li>
+							<span class="user-position">4.</span>
+							<h4 class="user-name">Username</h4>
+							<span class="user-pts">233</span>
+						</li>
+						<li>
+							<span class="user-position">5.</span>
+							<h4 class="user-name">Username</h4>
+							<span class="user-pts">233</span>
+						</li>
+					</ul>
+					
+				</section>
+				<!-- /.section-leaderboard -->
+
+			</div>
+			<!-- /.tab-content -->
+
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class=""><a href="#start" aria-controls="home" role="tab" data-toggle="tab">Start</a></li>
+				<li role="presentation" class="active"><a href="#leaderboard" aria-controls="profile" role="tab" data-toggle="tab">Leaderboard</a></li>
+			</ul>			
+
+			
+		</aside>
+		<!-- /.user -->
+
 		
 	</div>
 	<!-- /.content -->
