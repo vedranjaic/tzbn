@@ -62,6 +62,10 @@
 							color: $white;
 						}
 					}
+					// Radio button answers
+					input[type="radio"] {
+						display: none;
+					}
 				}
 				&.answer-correct {
 					.btn {

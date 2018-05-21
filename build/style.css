@@ -7805,6 +7805,9 @@ a {
 .section-qa .a .list-answers li.answer[class*="answer-"] .btn {
   color: #ffffff;
 }
+.section-qa .a .list-answers li.answer input[type="radio"] {
+  display: none;
+}
 .section-qa .a .list-answers li.answer-correct .btn {
   background-color: #58d263;
 }
