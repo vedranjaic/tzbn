@@ -20,6 +20,13 @@ a {
 	&-hurryup {
 
 	}
+	.progress-bar {
+		padding-right: 5px;
+		text-align: right;
+		font-size: 9px;
+		line-height: 10px;
+		color: neos(teal-dark);
+	}
 }
 
 // Intro
@@ -30,13 +37,34 @@ a {
 		// https://stackoverflow.com/questions/21287377/make-sun-rays-figure-using-css3
 		// background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9Ii0yNTYgLTI1NiA1MTIgNTEyIgogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiAKICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cjx0aXRsZT5VbnRpdGxlZDwvdGl0bGU+CjxkZWZzPgogIDxnIGlkPSJidXJzdCI+CiAgICA8ZyBpZD0icXVhZCI+CiAgICAgIDxwYXRoIGlkPSJyYXkiIGQ9Ik0wLDAgLTY5LC01MDAgNjksLTUwMCB6IiAvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDMwKSIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDkwKSIvPgogICAgPC9nPgogICAgPHVzZSB4bGluazpocmVmPSIjcXVhZCIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwKSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjcXVhZCIgdHJhbnNmb3JtPSJyb3RhdGUoMjQwKSIvPgogIDwvZz4KICA8cmFkaWFsR3JhZGllbnQgaWQ9ImdyYWQiIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSIgZng9IjUwJSIgZnk9IjUwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9ImJsYWNrIiBzdG9wLW9wYWNpdHk9IjAuNjUiLz4KICA8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM+CjxnPgogIDx1c2UgeGxpbms6aHJlZj0iI2J1cnN0IiBmaWxsPSJsaWdodHNsYXRlYmx1ZSIvPgogIDx1c2UgeGxpbms6aHJlZj0iI2J1cnN0IiBmaWxsPSJkYXJrc2xhdGVibHVlIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSkiLz4KICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVUeXBlPSJ4bWwiIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIgogICAgZnJvbT0iMCAwIDAiIHRvPSIzMCAwIDAiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgo8L2c+CjxjaXJjbGUgcj0iMzYwcHgiIGZpbGw9InVybCgjZ3JhZCkiIC8+Cjwvc3ZnPgo=");
 		// background-size: cover;
+		overflow: hidden;
 		.logo {
+			position: relative;
 			width: 70%;
 			max-width: 900px;
 			margin: 0 auto;
-			padding-top: 3em;
-			padding-bottom: 5em;
-			border-bottom: 2px solid $white;
+			padding-top: 5em;
+			padding-bottom: 6em;
+			// border-bottom: 2px solid $white;
+			z-index: 1;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 50%;
+				height: 3px;
+				background: radial-gradient(ellipse at right, rgba($white, 1) 0%, rgba($white, 0) 80%);
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 50%;
+				height: 3px;
+				background: radial-gradient(ellipse at left, rgba($white, 1) 0%, rgba($white, 0) 80%);
+			}
 			img {
 				margin: 0 13em;
 			}
@@ -48,7 +76,11 @@ a {
 		width: 70%;
 		// max-width: 900px;
 		margin: 0 auto;
+		h1 {
+			margin-bottom: 0.6em;
+		}
 		&-boxes {
+			margin-top: 2em;
 			display: flex;
 			justify-content: space-between;
 			li {
@@ -144,7 +176,7 @@ a {
 
 // Start Quiz
 .section-start {
-	padding: 2em 5em;
+	padding: 5em 5em;
 	.section-heading {
 		display: block;
 		margin-bottom: 3em;
@@ -199,90 +231,59 @@ a {
 
 // Sun rays
 
-.sunburst {
-   width: 1368px;
-   height: 680px;
-   margin:-11px -11px -11px -11px;
-   overflow: hidden;
-   background: #fff;
+.outer {
+	width: 100%;
+	height: 100%;
+  overflow: hidden;
+  opacity: 0.2;
 }
 
-.sunburst .outer {
-   width: 2000px;
-   height: 910px;
-   padding-top: 1090px;
-   margin: -800px 0 0 -310px;
-   animation-name: rotate;
-   animation-duration:2s;
-   animation-iteration-count:infinite;
-   animation-timing-function:linear;
-   -moz-animation-name: rotate1;
-   -moz-animation-duration:2s;
-   -moz-animation-iteration-count:infinite;
-   -moz-animation-timing-function:linear;
+.inner {
+	width: 300%;
+	height: 500%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 60s linear infinite;
 }
 
-.sunburst b {
-   display: block;
-   width: 0;
-   height: 0;
-   border-width: 90px 1000px;
-   margin: -180px 0 0 0;
-   border-color: transparent black;
-   border-style: solid;
+@keyframes spin {
+	from { transform: translate(-50%, -50%) rotate(0deg); }
+	to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-.sunburst b:nth-child(1) { 
-   transform:rotate(20deg);  
-   -moz-transform:rotate(20deg);  
+.gradient-wrap {
+  width: 100%;
+	height: 50%;
+	overflow: hidden;
 }
 
-.sunburst b:nth-child(2) { 
-   transform:rotate(40deg);  
-   -moz-transform:rotate(40deg);  
+.gradient-wrap:last-child {
+  transform: rotate(180deg);
 }
 
-.sunburst b:nth-child(3) { 
-   transform:rotate(60deg);  
-   -moz-transform:rotate(60deg);  
-}
-
-.sunburst b:nth-child(4) { 
-   transform:rotate(80deg);  
-   -moz-transform:rotate(80deg);  
-}
-
-.sunburst b:nth-child(5) { 
-   transform:rotate(100deg); 
-   -moz-transform:rotate(100deg); 
-}
-
-.sunburst b:nth-child(6) {    
-   transform:rotate(120deg); 
-   -moz-transform:rotate(120deg); 
-}
-
-.sunburst b:nth-child(7) { 
-   transform:rotate(140deg); 
-   -moz-transform:rotate(140deg); 
-}
-
-.sunburst b:nth-child(8) { 
-   transform:rotate(160deg); 
-   -moz-transform:rotate(160deg); 
-}
-
-.sunburst b:nth-child(9) { 
-   transform:rotate(180deg); 
-   -moz-transform:rotate(180deg); 
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(20deg); }
-}
-
-@-moz-keyframes rotate {
-    from { -moz-transform: rotate(0deg); }
-    to   { -moz-transform: rotate(20deg); }
+.gradient {
+	width: 100%;
+	height: 200%;
+	background:
+		linear-gradient(180deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient(170deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient(160deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient(150deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient(140deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient(130deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient(120deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient(110deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient(100deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient( 90deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient( 80deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient( 70deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient( 60deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient( 50deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient( 40deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient( 30deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient( 20deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%),
+		linear-gradient( 10deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
+		linear-gradient(  0deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%);
 }
