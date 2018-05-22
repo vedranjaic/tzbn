@@ -29,6 +29,7 @@ $progress-h: 10px;
 // Body
 body {
 	font-family: $font;
+	counter-reset: counter;
 }
 
 

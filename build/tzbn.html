@@ -15,8 +15,10 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=latin-ext" rel="stylesheet">
 	<script src="https://use.fontawesome.com/8015fbd523.js"></script>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/components/prism-java.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/components/prism-sql.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/themes/prism.css">
 	
 </head>
 <body class="modal-ope">
@@ -157,12 +159,51 @@
 
 				<span class="step-counter">Korak 1 / 15</span>
 				<h1 class="question-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae possimus autem necessitatibus, eos corrupti doloremque rem! Voluptate sunt modi nostrum?</h1>
-				<pre>
-<code class="java">public class Main { 
+
+<pre id="qid5">
+<code class="language-javascript">var a = "2"; 
+console.log(a + a);</code>
+</pre>
+
+<pre id="qid8">
+<code class="language-sql">SELECT TO_CHAR (SYSDATE, 'MM-DD-YYYY HH24:MI:SS') "NOW" FROM DUAL;</code>
+</pre>
+
+<pre id="qid1008">
+<code class="language-javascript">let list = [
+	{ ime: 'Dodo', dob: 13 }, 
+	{ ime: 'Pepo', dob: 24 }
+];
+
+console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
+</pre>
+
+<pre id="qid1013">
+<code class="language-java">public class Main { 
   public static void main(String[] args) { 
     System.out.<kbd>__________</kbd>("Želim biti NEOSovac!");
   }
-}</code></pre>
+}</code>
+</pre>
+
+<pre id="qid1026">
+<code class="language-javascript">let list = [
+	{ ime: 'Dodo', dob: 13 }, 
+	{ ime: 'Pepo', dob: 24 }
+];
+
+console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
+</pre>
+
+<pre id="qid1041">
+<code class="language-javascript">let list = [
+	{ ime: 'Dodo', dob: 13 }, 
+	{ ime: 'Pepo', dob: 24 }
+];
+
+console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
+</pre>
+
 
 			</section>
 			<!-- /.q -->
@@ -242,7 +283,6 @@
 	<script>window.jQuery || document.write('<script src="assets/js/vendors/jquery.min.js"><\/script>')</script>
 	<script src="assets/js/vendors/bootstrap.min.js"></script>
 	<script src="assets/js/app.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>

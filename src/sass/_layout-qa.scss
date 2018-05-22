@@ -20,6 +20,9 @@
 			font-weight: 700;
 			line-height: 1.3;
 		}
+		kbd {
+			background-color: lighten($grey, 20%);
+		}
 	}
 	.a {
 		width: 40%;
@@ -151,10 +154,22 @@
 pre {
 	padding: 15px;
 	font-size: 18px;
-	background-color: $grey;
+	background-color: $grey !important;
 	border: 0;
 	color: $white;
 	margin-top: 2em;
+	text-shadow: none !important;
+	display: none;
+	code {
+		color: $white !important;
+		text-shadow: none !important;
+		white-space: pre-wrap !important;
+		&.language-javascript {
+			.token.operator {
+				background-color: transparent !important;
+			}
+		}
+	}
 	.hljs {
 		background-color: transparent;
 		color: lighten($grey, 70%);
