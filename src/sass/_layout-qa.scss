@@ -47,6 +47,34 @@
 				// width: 50%;
 				height: 15vh;
 				margin-bottom: 1em;
+				&:nth-child(1) {
+					.btn {
+						&::before {
+							content: 'A';
+						}						
+					}
+				}
+				&:nth-child(2) {
+					.btn {
+						&::before {
+							content: 'B';
+						}						
+					}
+				}
+				&:nth-child(3) {
+					.btn {
+						&::before {
+							content: 'C';
+						}						
+					}
+				}
+				&:nth-child(4) {
+					.btn {
+						&::before {
+							content: 'D';
+						}						
+					}
+				}
 				&.answer {
 					.btn {
 						position: relative;
@@ -69,25 +97,49 @@
 					input[type="radio"] {
 						display: none;
 					}
+					&.user-choice {
+						.btn {
+							background-color: lighten(neos(teal-dark), 60%);
+						}
+					}
+					&.submit {
+						.btn {
+							padding: unset;
+							background-color: lighten(neos(teal-dark), 60%);
+							position: relative;
+							&::after {
+								@include transition(opacity);
+								content: '\f101';
+								font-family: $fa;
+								position: absolute;
+								right: 20px;
+								top: 50%;
+								transform: translateY(-45%);
+								font-size: 2em;
+								opacity: 0;
+								color: rgba($grey, 0.3);
+							}
+							&:hover {
+								background-color: lighten(neos(teal-dark), 40%);
+								&::after {
+									opacity: 1;
+								}
+							}
+						}
+					}
 				}
 				&.answer-correct {
 					.btn {
-						background-color: functional(green);
+						background-color: functional(green) !important;
 						&::after {
 							content: '\f00c';
 							font-family: $fa;
 						}
 					}
 				}
-				&.answer-was-correct {
-					.btn {
-						background-color: functional(green);
-						// Animate
-					}
-				}
 				&.answer-incorrect {
 					.btn {
-						background-color: functional(red);
+						background-color: functional(red) !important;
 						&::after {
 							content: '\f00d';
 							font-family: $fa;
@@ -122,26 +174,6 @@
 					align-items: center;
 					justify-content: center;
 					background-color: rgba(neos(teal-dark), 0.2);
-				}
-				&-a {
-					&::before {
-						content: 'A';
-					}
-				}
-				&-b {
-					&::before {
-						content: 'B';
-					}
-				}
-				&-c {
-					&::before {
-						content: 'C';
-					}
-				}
-				&-d {
-					&::before {
-						content: 'D';
-					}
 				}
 			}
 		}
