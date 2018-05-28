@@ -75,6 +75,7 @@
 						}						
 					}
 				}
+				// --------- [[ Answer ]]
 				&.answer {
 					.btn {
 						position: relative;
@@ -93,41 +94,16 @@
 							color: $white;
 						}
 					}
-					// Radio button answers
-					input[type="radio"] {
-						display: none;
-					}
 					&.user-choice {
 						.btn {
 							background-color: lighten(neos(teal-dark), 60%);
 						}
 					}
 					&.submit {
-						.btn {
-							padding: unset;
-							background-color: lighten(neos(teal-dark), 60%);
-							position: relative;
-							&::after {
-								@include transition(opacity);
-								content: '\f101';
-								font-family: $fa;
-								position: absolute;
-								right: 20px;
-								top: 50%;
-								transform: translateY(-45%);
-								font-size: 2em;
-								opacity: 0;
-								color: rgba($grey, 0.3);
-							}
-							&:hover {
-								background-color: lighten(neos(teal-dark), 40%);
-								&::after {
-									opacity: 1;
-								}
-							}
-						}
+						opacity: 1;
 					}
 				}
+				// /.answer
 				&.answer-correct {
 					.btn {
 						background-color: functional(green) !important;
@@ -145,6 +121,37 @@
 							font-family: $fa;
 						}
 					}
+				}
+				&.submit {
+					@include transition(opacity);
+					opacity: 0;
+					.btn {
+						padding: unset;
+						background-color: lighten(neos(teal-dark), 60%);
+						position: relative;
+						&::after {
+							@include transition(opacity);
+							content: '\f101';
+							font-family: $fa;
+							position: absolute;
+							right: 20px;
+							top: 50%;
+							transform: translateY(-45%);
+							font-size: 2em;
+							opacity: 0;
+							color: rgba($grey, 0.3);
+						}
+						&:hover {
+							background-color: lighten(neos(teal-dark), 40%);
+							&::after {
+								opacity: 1;
+							}
+						}
+					}
+				}
+				// Radio button answers
+				input[type="radio"] {
+					display: none;
 				}
 			}
 			.btn {
@@ -184,6 +191,7 @@
 
 // Pre and Code
 pre {
+	// !importants because of prismjs component
 	padding: 15px;
 	font-size: 18px;
 	background-color: $grey !important;
@@ -191,7 +199,7 @@ pre {
 	color: $white;
 	margin-top: 2em;
 	text-shadow: none !important;
-	display: none;
+	// display: none;
 	code {
 		color: $white !important;
 		text-shadow: none !important;
@@ -202,15 +210,8 @@ pre {
 			}
 		}
 	}
-	.hljs {
-		background-color: transparent;
-		color: lighten($grey, 70%);
-		&-string {
-			color: functional(red);
-		}
-		&-built_in {
-			color: functional(green);
-		}
+	&[class*="language-"] {
+		margin-top: 2em !important;
 	}
 }
 

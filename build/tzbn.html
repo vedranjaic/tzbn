@@ -44,7 +44,7 @@
 			<!-- /.logo -->
 
 			<ul class="list-position list-unstyled">
-				<li class="active">
+				<li>
 					<span class="steps">
 						<span class="number">1</span> 
 						<span class="step">Pitanje</span>
@@ -58,7 +58,7 @@
 						<i class="icon fa fa-check-circle"></i>
 					</span>
 				</li>
-				<li>
+				<li class="active">
 					<span class="steps">
 						<span class="number">3</span> 
 						<span class="step">Pitanje</span>
@@ -160,16 +160,16 @@
 				<span class="step-counter">Korak 1 / 15</span>
 				<h1 class="question-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae possimus autem necessitatibus, eos corrupti doloremque rem! Voluptate sunt modi nostrum?</h1>
 
-<pre id="qid5">
+<pre id="qid5" class="hidden">
 <code class="language-javascript">var a = "2"; 
 console.log(a + a);</code>
 </pre>
 
-<pre id="qid8">
+<pre id="qid8" class="hidden">
 <code class="language-sql">SELECT TO_CHAR (SYSDATE, 'MM-DD-YYYY HH24:MI:SS') "NOW" FROM DUAL;</code>
 </pre>
 
-<pre id="qid1008">
+<pre id="qid1008" class="hidden">
 <code class="language-javascript">let list = [
 	{ ime: 'Dodo', dob: 13 }, 
 	{ ime: 'Pepo', dob: 24 }
@@ -178,7 +178,7 @@ console.log(a + a);</code>
 console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
 </pre>
 
-<pre id="qid1013">
+<pre id="qid1013" class="hidden">
 <code class="language-java">public class Main { 
   public static void main(String[] args) { 
     System.out.<kbd>__________</kbd>("Želim biti NEOSovac!");
@@ -186,7 +186,7 @@ console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
 }</code>
 </pre>
 
-<pre id="qid1026">
+<pre id="qid1026" class="hidden">
 <code class="language-javascript">let list = [
 	{ ime: 'Dodo', dob: 13 }, 
 	{ ime: 'Pepo', dob: 24 }
@@ -219,27 +219,27 @@ console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
 				</ul> -->
 
 				<ul class="list-answers list-unstyled">
-					<li class="answer">
+					<li class="">
 						<label for="answer1" class="btn btn-default">
 							<input type="radio" id="answer1"> Odgovor A
 						</label>
 					</li>
-					<li class="answer answer-correct">
+					<li class="">
 						<label for="answer2" class="btn btn-default">
 							<input type="radio" id="answer2"> Odgovor B
 						</label>
 					</li>
-					<li class="answer answer-incorrect">
+					<li class="">
 						<label for="answer3" class="btn btn-default">
 							<input type="radio" id="answer3"> Odgovor C
 						</label>
 					</li>
-					<li class="answer">
+					<li class="">
 						<label for="answer4" class="btn btn-default">
 							<input type="radio" id="answer4"> Odgovor D
 						</label>
 					</li>
-					<li class="answer submit">
+					<li class="submit">
 						<button class="btn btn-default">Sljedeće</button>
 					</li>
 				</ul>
@@ -265,8 +265,8 @@ console.log( list.filter( it => it.dob > 18 ).map( it => it.ime ) );</code>
 					<h2 class="reward">Frišku Figu</h2>
 					<p class="lead">Obavijesti djelatnika NEOSa o preuzimanju <br>svoje nagrade.</p>
 					<p class="lead">Naravno, zaigrati možeš opet, no bilo bi <strong>"JobFair"</strong> prepustiti nekom drugom ako čeka u redu. <i class="icon fa fa-smile-o"></i></p>
-					<p class="lead">Okušati možeš svoje znanje ponovno s drugim pitanjima za nešto manje od</p>
-					<h3 class="countdown">5:00 minuta</h3>
+					<!-- <p class="lead">Okušati možeš svoje znanje ponovno s drugim pitanjima za nešto manje od</p> -->
+					<!-- <h3 class="countdown">5:00 minuta</h3> -->
 				</div>
 				<!-- /.modal-body -->
 				<div class="modal-footer text-center">
