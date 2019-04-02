@@ -7343,18 +7343,46 @@ a {
   border-radius: 0;
   box-shadow: none;
 }
-.progress-bar {
-  background-color: #58c7d2;
-  box-shadow: none;
-}
 .progress .progress-bar {
   padding-right: 5px;
   text-align: right;
   font-size: 9px;
   line-height: 10px;
-  color: #1f738b;
+  background-color: #58c7d2;
+  color: #ffffff;
+  box-shadow: none;
 }
 
+.progress-hurryup .progress-bar {
+  animation: hurryup 1000ms linear infinite;
+}
+
+.progress-lastchance .progress-bar {
+  animation: lastchance 1000ms linear infinite;
+}
+
+@keyframes hurryup {
+  0% {
+    background-color: #58c7d2;
+  }
+  50% {
+    background-color: #ffca3a;
+  }
+  100% {
+    background-color: #58c7d2;
+  }
+}
+@keyframes lastchance {
+  0% {
+    background-color: #58c7d2;
+  }
+  50% {
+    background-color: #d26358;
+  }
+  100% {
+    background-color: #58c7d2;
+  }
+}
 .section-intro {
   width: 70vw;
 }
@@ -7611,6 +7639,9 @@ a {
   counter-increment: counter;
   content: counter(counter) ".";
 }
+.leaderboard li.myposition {
+  background-color: #ffca3a;
+}
 
 .outer {
   width: 100%;
@@ -7693,7 +7724,7 @@ a {
   flex: 1 1 100%;
   height: calc((100vh - 10px - 80px) / 15);
   background-color: #1f738b;
-  color: #ffffff;
+  color: #58c7d2;
   font-size: 16px;
   -ms-flex-align: center;
   align-items: center;
@@ -7704,9 +7735,14 @@ a {
 }
 .section-ladder .list-position li.reward {
   background-color: #58c7d2;
+  color: #b5e6eb;
+}
+.section-ladder .list-position li.reward.active {
+  color: #ffffff;
 }
 .section-ladder .list-position li.active .steps {
   background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 .section-ladder .list-position li .steps {
   width: 100%;

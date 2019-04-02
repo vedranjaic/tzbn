@@ -13,20 +13,43 @@ a {
 	background-color: neos(teal-dark);
 	border-radius: 0;
 	box-shadow: none;
-	&-bar {
-		background-color: neos(teal-medium);
-		box-shadow: none;
-	}
-	&-hurryup {
 
-	}
+	
 	.progress-bar {
 		padding-right: 5px;
 		text-align: right;
 		font-size: 9px;
 		line-height: 10px;
-		color: neos(teal-dark);
+		background-color: neos(teal-medium);
+		// color: neos(teal-dark);
+		color: $white;
+		box-shadow: none;
 	}
+
+}
+
+.progress-hurryup {
+	.progress-bar {
+		animation: hurryup 1000ms linear infinite;
+	}
+	
+}
+.progress-lastchance {
+	.progress-bar {
+		animation: lastchance 1000ms linear infinite;
+	}
+}
+
+@keyframes hurryup {
+	0%   {background-color: neos(teal-medium);}
+	50%  {background-color: functional(yellow);}
+	100% {background-color: neos(teal-medium);}
+}
+
+@keyframes lastchance {
+	0%   {background-color: neos(teal-medium);}
+	50%  {background-color: functional(red);}
+	100% {background-color: neos(teal-medium);}
 }
 
 // Intro
@@ -254,6 +277,10 @@ a {
 				}
 			}
 		}
+
+		&.myposition {
+			background-color: functional(yellow);
+		}
 	}
 }
 
@@ -317,3 +344,6 @@ a {
 		linear-gradient( 10deg, transparent 50%, neos(teal-light) 50%, neos(teal-light) 100%),
 		linear-gradient(  0deg, transparent 50%, neos(teal-medium) 50%, neos(teal-medium) 100%);
 }
+
+
+

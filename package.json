@@ -27,6 +27,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-tinify": "^1.0.2",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "natives": "^1.1.6"
   }
 }
