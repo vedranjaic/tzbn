@@ -1,0 +1,63 @@
+// Guide
+.guide {
+	width: 70vw;
+
+	.carousel {
+		height: 100vh;
+
+		.carousel-control {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 50px;
+
+			// Disabled buttons
+			&.disabled {
+				opacity: 0.2;
+				pointer-events: none;
+			}
+		}
+		
+		.item {
+			padding: 6.8em 10em;
+			text-align: center;
+		}
+	}
+
+	video {
+		width: 100%;
+    }
+    
+    .guide-title {
+        color: neos(teal-dark);
+        font-weight: 700;
+        line-height: 1.3;
+	}
+	
+	.lead {
+		color: neos(teal-dark);
+	}
+}
+
+// Provjera podataka
+.user {
+	label {
+		display: block;
+	}
+
+	.form-control-static {
+		font-size: 20px;
+		padding-top: 0;
+		padding-bottom: 0;
+		background-color: transparent;
+		border: 0;
+		height: auto;
+	}
+
+	.form-edit {
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+}

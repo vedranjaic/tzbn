@@ -7299,6 +7299,18 @@ body {
   text-align: center;
 }
 
+.input-lg, .input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  height: 40px;
+  padding: 8px 12px;
+}
+
+hr {
+  border-top-color: #58c7d2;
+  width: 70%;
+}
+
 *:focus {
   outline: 0;
 }
@@ -7437,12 +7449,16 @@ a {
   justify-content: space-between;
 }
 .section-intro .intro-boxes li {
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   border: 2px solid #ffffff;
   border-radius: 5px;
   color: #1f738b;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 2em;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .section-intro .intro-boxes li .icon {
   font-size: 30px;
@@ -7454,6 +7470,8 @@ a {
   bottom: -3em;
   font-weight: 700;
   font-size: 20px;
+  left: 50%;
+  margin-left: -5px;
 }
 .section-intro .intro-boxes li:nth-child(1)::before {
   content: '';
@@ -7464,6 +7482,8 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  left: 50%;
+  margin-left: -20px;
 }
 .section-intro .intro-boxes li:nth-child(2)::after {
   content: "2";
@@ -7471,6 +7491,8 @@ a {
   bottom: -3em;
   font-weight: 700;
   font-size: 20px;
+  left: 50%;
+  margin-left: -5px;
 }
 .section-intro .intro-boxes li:nth-child(2)::before {
   content: '';
@@ -7481,6 +7503,8 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  left: 50%;
+  margin-left: -20px;
 }
 .section-intro .intro-boxes li:nth-child(3)::after {
   content: "3";
@@ -7488,6 +7512,8 @@ a {
   bottom: -3em;
   font-weight: 700;
   font-size: 20px;
+  left: 50%;
+  margin-left: -5px;
 }
 .section-intro .intro-boxes li:nth-child(3)::before {
   content: '';
@@ -7498,6 +7524,8 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  left: 50%;
+  margin-left: -20px;
 }
 
 .user {
@@ -7684,6 +7712,56 @@ a {
   width: 100%;
   height: 200%;
   background: linear-gradient(180deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(170deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(160deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(150deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(140deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(130deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(120deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(110deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(100deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(90deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(80deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(70deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(60deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(50deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(40deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(30deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(20deg, transparent 50%, #58c7d2 50%, #58c7d2 100%), linear-gradient(10deg, transparent 50%, #b5e6eb 50%, #b5e6eb 100%), linear-gradient(0deg, transparent 50%, #58c7d2 50%, #58c7d2 100%);
+}
+
+.guide {
+  width: 70vw;
+}
+.guide .carousel {
+  height: 100vh;
+}
+.guide .carousel .carousel-control {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 50px;
+}
+.guide .carousel .carousel-control.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.guide .carousel .item {
+  padding: 6.8em 10em;
+  text-align: center;
+}
+.guide video {
+  width: 100%;
+}
+.guide .guide-title {
+  color: #1f738b;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.guide .lead {
+  color: #1f738b;
+}
+
+.user label {
+  display: block;
+}
+.user .form-control-static {
+  font-size: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  height: auto;
+}
+.user .form-edit:hover, .user .form-edit:focus {
+  color: #ffffff;
 }
 
 .section-ladder {

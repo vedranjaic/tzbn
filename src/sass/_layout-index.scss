@@ -107,12 +107,15 @@ a {
 			display: flex;
 			justify-content: space-between;
 			li {
+				flex: 1;
 				position: relative;
 				border: 2px solid $white;
 				border-radius: 5px;
 				color: neos(teal-dark);
 				background-color: rgba($white, 0.3);
 				padding: 2em;
+				margin-left: 10px;
+				margin-right: 10px;
 				.icon {
 					font-size: 30px;
 					margin-bottom: 0.3em;
@@ -125,6 +128,8 @@ a {
 							bottom: -3em;
 							font-weight: 700;
 							font-size: 20px;
+							left: 50%;
+							margin-left: -5px;
 						}
 						&::before {
 							content: '';
@@ -136,6 +141,8 @@ a {
 							width: 40px;
 							height: 40px;
 							border-radius: 50%;
+							left: 50%;
+							margin-left: -20px;
 						}
 					}
 				}
@@ -236,6 +243,7 @@ a {
 		background: rgba(255,0,0,0.4); 
 	}
 }
+
 .leaderboard {
 	margin-bottom: 0;
 	padding-bottom: 46px;
@@ -287,7 +295,6 @@ a {
 
 
 // Sun rays
-
 .outer {
 	width: 100%;
 	height: 100%;

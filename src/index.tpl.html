@@ -30,13 +30,13 @@
 				<p class="lead">Imaš 30 sekundi po pitanju, odgovori na nekoliko njih i riješi par zadataka</p>
 				<ul class="intro-boxes list-unstyled">
 					<li>
-						<i class="icon fa fa-gift"></i>
-						<p>Osvoji nagrade</p>
-
-					</li>
-					<li>
 						<i class="icon fa fa-id-card-o"></i>
 						<p>Upoznaj nas</p>
+						
+					</li>
+					<li>
+						<i class="icon fa fa-gift"></i>
+						<p>Osvoji nagrade</p>
 
 					</li>
 					<li>
@@ -56,7 +56,7 @@
 				<section class="section-start tab-pane active" role="tabpanel" id="start">
 					<heading class="section-heading">
 						<h3 class="section-title">Registriraj se i kreni!</h3>
-						<p>Tvoje podatke koristimo samo u svrhu igranja nagradne igre, podatke koje ostaviš ne prikazujemo javno.</p>				
+						<p>Tvoje podatke koristimo samo u svrhu igranja nagradne igre, osobne podatke koje ostaviš ne prikazujemo javno.</p>				
 					</heading>
 					<!-- /.section-heading -->
 					<form action="#">
@@ -66,16 +66,26 @@
 						</div>
 						<!-- /.form-group -->
 						<div class="form-group">
-							<label for="tzbnUsername">Odaberi username:</label>
+							<label for="tzbnUsername">Nickname:</label>
 							<input type="text" class="form-control input-lg" id="tzbnUsername">
 						</div>
 						<!-- /.form-group -->
 						<div class="form-group">
-							<label for="tzbnFERMail">Mejl s faksa:</label>
+							<label for="tzbnFERMail">E-mail:</label>
 							<input type="email" class="form-control input-lg" id="tzbnFERMail" required>
 						</div>
 						<!-- /.form-group -->
-						<a href="tzbn.html" class="btn btn-lg btn-success btn-block btn-start">POKRENI KVIZ</a>
+						<div class="form-group">
+							<label for="tzbnFERMail">Fakultet:</label>
+							<input type="text" class="form-control input-lg" id="tzbnFaculty">
+						</div>
+						<!-- /.form-group -->
+						<div class="form-group">
+							<label for="tzbnFERMail">Godina studija:</label>
+							<input type="number" class="form-control input-lg" id="tzbnYear">
+						</div>
+						<!-- /.form-group -->
+						<a href="confirm.html" class="btn btn-lg btn-success btn-block btn-start text-uppercase">Sljedeći korak</a>
 					</form>
 				</section>
 				<!-- /.section-start -->
@@ -85,7 +95,7 @@
 					<ul class="leaderboard list-unstyled">
 						<li class="sticky">
 							<span class="user-position">#</span>
-							<h4 class="user-name">Username</h4>
+							<h4 class="user-name">Leaderboard</h4>
 							<span class="user-pts">Pts</span>
 						</li>
 						<li>

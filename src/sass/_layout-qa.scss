@@ -5,16 +5,19 @@
 	width: 86vw;
 	display: flex;
 	justify-content: space-between;
+
 	.q {
 		width: 60%;
 		padding: 3.5em 5em;
 		// background-color: functional(yellow);
 		background: radial-gradient(neos(teal-light), neos(teal-medium));
+
 		.step-counter {
 			text-transform: uppercase;
 			color: $white;
 			font-size: 16px;
 		}
+
 		.question-title {
 			color: neos(teal-dark);
 			font-weight: 700;
@@ -28,25 +31,30 @@
 		width: 40%;
 		background-color: neos(teal-dark);
 		padding: 3.5em 2em;
+		
 		.a-title{
 			color: $white;
 			display: block;
 			text-transform: uppercase;
 			margin-bottom: 1.2em;
 		}
+		
 		.list-answers {
 			display: flex;
 			// flex-wrap: wrap;
 			flex-direction: column;
+			
 			&:hover {
 				.btn {
 					background-color: lighten(neos(teal-dark), 40%);
 				}
 			}
+			
 			li {
 				// width: 50%;
 				height: 15vh;
 				margin-bottom: 1em;
+				
 				&:nth-child(1) {
 					.btn {
 						&::before {
@@ -81,6 +89,7 @@
 						position: relative;
 						background-color: lighten(neos(teal-dark), 40%);
 						// overflow: hidden;
+						
 						&::after {
 							position: absolute;
 							bottom: -0.45em;
@@ -107,6 +116,7 @@
 				&.answer-correct {
 					.btn {
 						background-color: functional(green) !important;
+						
 						&::after {
 							content: '\f00c';
 							font-family: $fa;
@@ -116,6 +126,7 @@
 				&.answer-incorrect {
 					.btn {
 						background-color: functional(red) !important;
+						
 						&::after {
 							content: '\f00d';
 							font-family: $fa;
@@ -125,10 +136,12 @@
 				&.submit {
 					@include transition(opacity);
 					opacity: 0;
+					
 					.btn {
 						padding: unset;
 						background-color: lighten(neos(teal-dark), 60%);
 						position: relative;
+						
 						&::after {
 							@include transition(opacity);
 							content: '\f101';
@@ -141,8 +154,10 @@
 							opacity: 0;
 							color: rgba($grey, 0.3);
 						}
+						
 						&:hover {
 							background-color: lighten(neos(teal-dark), 40%);
+							
 							&::after {
 								opacity: 1;
 							}
@@ -167,10 +182,12 @@
 				white-space: normal;
 				padding-left: 70px;
 				background-color: lighten(neos(teal-dark), 60%);
+				
 				&:hover,
 				&:focus {
 					background-color: lighten(neos(teal-dark), 80%);
 				}
+				
 				&::before {
 					position: absolute;
 					left: 0;
