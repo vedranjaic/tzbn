@@ -3,6 +3,7 @@
 	// flex: 1;
 	height: calc(100vh - #{$progress-h} - 80px);
 	width: 14vw;
+
 	.logo {
 		display: flex;
 		justify-content: center;
@@ -74,18 +75,47 @@
 				// height: 100%;
 			}
 			.icon {
+				position: relative;
 				align-self: center;
 				font-size: 1.4em;
+
+				
+
 				&.fa-circle {
 					color: rgba($black, 0.2);
 				}
 				&.fa-check-circle {
 					color: functional(green);
+					@extend %white-bg;
+					&::before {
+						position: relative;
+						z-index: 2;
+					}
 				}
 				&.fa-times-circle {
 					color: functional(red);
+					@extend %white-bg;
+					&::before {
+						position: relative;
+						z-index: 2;
+					}
 				}
 			}
 		}
+	}
+}
+
+// White bg
+%white-bg {
+	&::after {
+		content: '';
+		width: 14px;
+		height: 14px;
+		background-color: $white;
+		border-radius: 50%;
+		position: absolute;
+		left: 3px;
+		top: 4px;
+		z-index: 1;
 	}
 }

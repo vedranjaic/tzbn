@@ -7403,13 +7403,18 @@ a {
   overflow: hidden;
 }
 .section-intro .branding .logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   width: 70%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 5em;
-  padding-bottom: 6em;
   z-index: 1;
+  height: 30vh;
 }
 .section-intro .branding .logo::before {
   content: '';
@@ -7430,10 +7435,10 @@ a {
   background: radial-gradient(ellipse at left, white 0%, rgba(255, 255, 255, 0) 80%);
 }
 .section-intro .branding .logo img {
-  margin: 0 13em;
+  height: 10rem;
 }
 .section-intro .intro {
-  padding: 2em 5em;
+  padding: 3em 5em;
   color: #1f738b;
   width: 70%;
   margin: 0 auto;
@@ -7623,6 +7628,8 @@ a {
   padding-bottom: 46px;
 }
 .leaderboard li {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -7667,7 +7674,7 @@ a {
   counter-increment: counter;
   content: counter(counter) ".";
 }
-.leaderboard li.myposition {
+.leaderboard li.active {
   background-color: #ffca3a;
 }
 
@@ -7739,6 +7746,7 @@ a {
 }
 .guide video {
   width: 100%;
+  border: 15px solid #1f738b;
 }
 .guide .guide-title {
   color: #1f738b;
@@ -7853,6 +7861,7 @@ a {
   align-self: center;
 }
 .section-ladder .list-position li .icon {
+  position: relative;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -7864,8 +7873,28 @@ a {
 .section-ladder .list-position li .icon.fa-check-circle {
   color: #58d263;
 }
+.section-ladder .list-position li .icon.fa-check-circle::before {
+  position: relative;
+  z-index: 2;
+}
 .section-ladder .list-position li .icon.fa-times-circle {
   color: #d26358;
+}
+.section-ladder .list-position li .icon.fa-times-circle::before {
+  position: relative;
+  z-index: 2;
+}
+
+.section-ladder .list-position li .icon.fa-check-circle::after, .section-ladder .list-position li .icon.fa-times-circle::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  z-index: 1;
 }
 
 .section-qa {

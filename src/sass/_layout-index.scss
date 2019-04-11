@@ -62,14 +62,18 @@ a {
 		// background-size: cover;
 		overflow: hidden;
 		.logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			position: relative;
 			width: 70%;
 			max-width: 900px;
 			margin: 0 auto;
-			padding-top: 5em;
-			padding-bottom: 6em;
+			// padding-top: 5em;
+			// padding-bottom: 6em;
 			// border-bottom: 2px solid $white;
 			z-index: 1;
+			height: 30vh;
 			&::before {
 				content: '';
 				position: absolute;
@@ -89,12 +93,13 @@ a {
 				background: radial-gradient(ellipse at left, rgba($white, 1) 0%, rgba($white, 0) 80%);
 			}
 			img {
-				margin: 0 13em;
+				// margin: 0 13em;
+				height: 10rem;
 			}
 		}
 	}
 	.intro {
-		padding: 2em 5em;
+		padding: 3em 5em;
 		color: neos(teal-dark);
 		width: 70%;
 		// max-width: 900px;
@@ -248,6 +253,7 @@ a {
 	margin-bottom: 0;
 	padding-bottom: 46px;
 	li {
+		@include transition(background-color);
 		display: flex;
 		align-items: center;
 		border-bottom: 1px solid darken(neos(teal-dark), 5%);
@@ -286,7 +292,7 @@ a {
 			}
 		}
 
-		&.myposition {
+		&.active {
 			background-color: functional(yellow);
 		}
 	}
